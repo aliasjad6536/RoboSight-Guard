@@ -37,6 +37,85 @@ The backend computer vision pipeline was bridged to a Streamlit frontend for use
 
 ## System Architecture Workflow
 
+### Visual Pipeline (Flowchart)
+
+```mermaid
+flowchart TD
+
+    %% ---------- STAGE 1 ----------
+    subgraph S1["1. INPUT SOURCE"]
+        A["CCTV Video Feed<br/>Live Stream / Uploaded Video"]
+    end
+
+    %% ---------- STAGE 2 ----------
+    subgraph S2["2. PRE-PROCESSING & EXTRACTION"]
+        B["Frame Extraction<br/>OpenCV"]
+        C["Frame Skipping and Resizing<br/>Every 3rd Frame, imgsz = 736"]
+    end
+
+    %% ---------- STAGE 3 ----------
+    subgraph S3["3. CORE AI DETECTION & TRACKING"]
+        D["YOLOv8 Medium<br/>yolov8m.pt"]
+        E["ByteTrack Algorithm<br/>Persistent Tracking IDs"]
+        F["Detected Entities<br/>Workers and Forklifts"]
+    end
+
+    %% ---------- STAGE 4 ----------
+    subgraph S4["4. MATHEMATICAL PROXIMITY ENGINE"]
+        G["Centroid Extraction<br/>from Bounding Boxes"]
+        H["Euclidean Distance<br/>d = sqrt((x2 - x1)^2 + (y2 - y1)^2)"]
+    end
+
+    %% ---------- STAGE 5 ----------
+    subgraph S5["5. THRESHOLD EVALUATION"]
+        I{"Distance less than<br/>Danger Zone Radius?"}
+    end
+
+    %% ---------- STAGE 6 ----------
+    subgraph S6["6. BRANCHING LOGIC"]
+        J["DANGER: Trigger Emergency Stop<br/>Red Boundary, Warning Text, Audio Beep"]
+        K["SAFE: Standard Tracking<br/>Green / Blue Bounding Boxes"]
+    end
+
+    %% ---------- STAGE 7 ----------
+    subgraph S7["7. FRONTEND OUTPUT"]
+        L["Final Frame Rendering"]
+        M["Streamlit Web Dashboard<br/>Real-Time Monitoring"]
+    end
+
+    %% ---------- FLOW ----------
+    A --> B --> C --> D --> E --> F --> G --> H --> I
+    I -- "YES (Breach)" --> J
+    I -- "NO (Safe)" --> K
+    J --> L
+    K --> L
+    L --> M
+
+    %% ---------- STYLING ----------
+    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef process fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#4a148c
+    classDef ai fill:#e8eaf6,stroke:#283593,stroke-width:2px,color:#1a237e
+    classDef math fill:#fff8e1,stroke:#f9a825,stroke-width:2px,color:#e65100
+    classDef decision fill:#fff3e0,stroke:#ef6c00,stroke-width:3px,color:#bf360c
+    classDef danger fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#b71c1c
+    classDef safe fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px,color:#1b5e20
+    classDef output fill:#e0f7fa,stroke:#00838f,stroke-width:2px,color:#006064
+
+    class A input
+    class B,C process
+    class D,E,F ai
+    class G,H math
+    class I decision
+    class J danger
+    class K safe
+    class L,M output
+
+    linkStyle 9 stroke:#c62828,stroke-width:3px
+    linkStyle 10 stroke:#2e7d32,stroke-width:3px
+```
+
+### Text Workflow
+
 ```text
 [CCTV Video Input Stream]
            |
