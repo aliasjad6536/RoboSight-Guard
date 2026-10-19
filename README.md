@@ -1,4 +1,5 @@
-<img width="913" height="526" alt="image" src="https://github.com/user-attachments/assets/9991958a-2502-4f6c-9545-13b3970e5995" /># RoboSight Guard: AI-Powered Workplace Safety & Collision Avoidance System
+<img width="913" height="526" alt="image" src="https://github.com/user-attachments/assets/9991958a-2502-4f6c-9545-13b3970e5995" />
+# RoboSight Guard: AI-Powered Workplace Safety & Collision Avoidance System
 
 ## Abstract
 RoboSight Guard is a highly optimized, computer vision-based safety system engineered to mitigate the risk of industrial accidents. By ingesting and processing real-time CCTV footage, the system identifies human workers and heavy industrial machinery (specifically forklifts), continuously calculates their spatial Euclidean proximity, and triggers immediate visual and auditory emergency protocols if a predefined safety radius is breached. Developed as a robust solution for the NYLP AI Hackathon 2026, the architecture emphasizes practical deployment, low-latency inference, and real-time hazard mitigation in dynamic environments.
