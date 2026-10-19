@@ -130,14 +130,15 @@ Base identification and tracking logic without proximity breach (Reference: step
 Euclidean threshold breach resulting in visual collision warnings (Reference: step3_math.py).
 
 3. Web Dashboard Interface
+### 3. Web Dashboard Interface
 The final production-ready frontend control panel featuring frame-skipping optimizations (Reference: step5_dashboard.py).
-![Uploading Screenshot 2026-10-19 202504.png…]()
-src="https://github.com/user-attachments/assets/29bce758-13eb-47d4-b9f4-d9c261ebcb84" />
-src="https://github.com/user-attachments/assets/970a4cd1-2069-4546-9b41-0d33968aa0fb" />
-src="https://github.com/user-attachments/assets/746dc377-f829-42ed-a44f-70d42bac2d63" />
-src="https://github.com/user-attachments/assets/502ac34f-cd92-4eea-b07a-908480bee17b" />
-src="https://github.com/user-attachments/assets/66754130-781f-4632-a19e-5b02ee2954e1" />
-src="https://github.com/user-attachments/assets/eb56c665-2524-4aa2-98c0-0016fe0e06ff" />
-src="https://github.com/user-attachments/assets/ac3a3989-c285-4eca-b30e-cd1be2333fa4" />
-src="https://github.com/user-attachments/assets/5f584980-c55b-457e-83bb-99b340b7a88d" />
-src="https://github.com/user-attachments/assets/cb60d398-d0e6-4d43-a0fe-134350510e88" />
+
+![Dashboard 1](https://github.com/user-attachments/assets/29bce758-13eb-47d4-b9f4-d9c261ebcb84)
+![Dashboard 2](https://github.com/user-attachments/assets/970a4cd1-2069-4546-9b41-0d33968aa0fb)
+![Dashboard 3](https://github.com/user-attachments/assets/746dc377-f829-42ed-a44f-70d42bac2d63)
+![Dashboard 4](https://github.com/user-attachments/assets/502ac34f-cd92-4eea-b07a-908480bee17b)
+![Dashboard 5](https://github.com/user-attachments/assets/66754130-781f-4632-a19e-5b02ee2954e1)
+![Dashboard 6](https://github.com/user-attachments/assets/eb56c665-2524-4aa2-98c0-0016fe0e06ff)
+![Dashboard 7](https://github.com/user-attachments/assets/ac3a3989-c285-4eca-b30e-cd1be2333fa4)
+![Dashboard 8](https://github.com/user-attachments/assets/5f584980-c55b-457e-83bb-99b340b7a88d)
+![Dashboard 9](https://github.com/user-attachments/assets/cb60d398-d0e6-4d43-a0fe-134350510e88)
